@@ -1,0 +1,84 @@
+body {
+    background-color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    border-bottom: 1px solid dimgray;
+    padding-bottom: 0.5em;
+}
+
+nav {
+    font-family: Helvetica, Arial, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+nav h1 {
+    font-size:xx-large;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+}
+
+nav li {
+    margin: 1em;
+}
+
+nav a {
+    color:darkslategrey;
+    font-weight: 600;
+    text-decoration: none;
+    font-size:large;
+}
+
+nav a:hover, nav a:active {
+    color:rgb(31, 31, 136);
+}
+
+#about p {
+    text-indent: 2em;
+}
+
+details {
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    border: 1px solid dimgray;
+    border-radius: 0.5em;
+}
+
+details > div {
+    border-top: 1px solid dimgray;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+}
+
+summary {
+    width: 100%;
+    cursor: pointer;
+}
+
+summary h3 {
+    display: inline;
+}
+
+footer {
+    font-size: smaller;
+    text-align: center;
+}
