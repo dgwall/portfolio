@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>David Wallace Portfolio</title>
-        <link rel="stylesheet" href="./main.css" />
+        <link id="stylesheet" rel="stylesheet" href="./main.css" />
         <script src="https://kit.fontawesome.com/b87fac1863.js" crossorigin="anonymous"></script>
     </head>
 
@@ -17,6 +17,9 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <a onclick="setStyleSheet('dark.css')" href="#"><li id="dark" style="display:contents"><i class="fa-solid fa-moon"></i></li></a>
+                    <a onclick="setStyleSheet('main.css')" href="#"><li id="light" style="display:none"><i class="fa-solid fa-sun"></i></li></a>
+                    <li id="alien" style="display:none"><i class="fa-solid fa-biohazard"></i></li>
                 </ul>
             </nav>
         </header>
@@ -52,27 +55,42 @@
 
             <section id="skills">
                 <h2>Skills</h2>
-                <div id="skills-container">
-                    <i class="fa-solid fa-c fa-2x"></i>
-                    <i class="fa-solid fa-c fa-2x">++</i>
-                    <i class="fa-solid fa-c fa-2x">#</i>
-                    <i class="fab fa-css3-alt fa-2x"></i>
-                    <i class="fa-solid fa-database fa-2x"></i>
-                    <i class="fab fa-git fa-2x"></i>
-                    <i class="fab fa-github fa-2x"></i>
-                    <i class="fab fa-html5 fa-2x"></i>
-                    <i class="fa-brands fa-java fa-2x"></i>
-                    <i class="fab fa-js fa-2x"></i>
-                    <i class="fa-brands fa-python fa-2x"></i>
-                    <i class="fas fa-terminal fa-2x"></i>
-                </div>
+
+                <h3>Qualifications and Certifications</h3>
+                <ul>
+                    <li>University of Dundee: BSc Applied Computing</li>
+                    <li>Codecademy: Learn Python 3, Learn Intermediate Python 3</li>
+                    <li>Google Certification: Online Marketing Fundamentals</li>
+                    <li>Full clean UK driver's license</li>
+                </ul>
+
+                <h3>Techincal Proficiencies</h3>
+                <ul id="tech">
+                    <li><i class="fa-solid fa-c"></i> C, C++, and C#</li>
+                    <li><i class="fa-brands fa-java"></i> Java</li>
+                    <li><i class="fa-brands fa-python"></i> Python 3</li>
+                    <li><i class="fab fa-html5"></i> HTML5 and <i class="fab fa-css3-alt"></i> CSS3</li>
+                    <li><i class="fab fa-js"></i> JavaScript</li>
+                    <li><i class="fa-solid fa-database"></i> Database Systems, SQL, and PHP</li>
+                    <li><i class="fab fa-git"></i> Git and <i class="fab fa-github"></i> GitHub Version Control</li>
+                    <li><i class="fa-brands fa-windows"></i> Microsoft Office</li>
+                    <li><i class="fa-solid fa-network-wired"></i> Networking and <i class="fa-solid fa-users"></i> Windows Administrative Tools</li>
+                    <li><i class="fas fa-terminal"></i> Shell Scripting and <i class="fa-brands fa-linux"></i> UNIX/Linux</li>
+                    <li><i class="fa-solid fa-photo-film"></i> Video and Image Editing Suites</li>
+                    <li><i class="fa-solid fa-volume-high"></i> Digital Audio Workstations</li>
+                    <li><i class="fa-solid fa-eye"></i> Data Visualisation and User Experience Design</li>
+                    <li><i class="fa-solid fa-gamepad"></i> Games Programming</li>
+                </ul>
             </section>
 
             <section id="contact">
                 <h2>Contact</h2>
                 <p>
+                    Currently open to joining teams working on interesting projects and to job opportunities. Don't hesitate to get in touch.
+                </p>
+                <p>
                     <i class="fa-regular fa-envelope"></i> &#119;&#97;<!-- &#107;&#107;&#107;&#107;&#107;&#107; -->&#107;&#107;&#97;&#99;<!-- 123 -->&#101;&#64;<!-- yahoo.com -->&#103;&#109;&#97;<!-- abc@xyz -->&#105;&#108;&#46;&#99;&#111;&#109;<br>
-                    <i class="fa-brands fa-linkedin"></i> Coming soon<br>
+                    <i class="fa-brands fa-linkedin"></i> Coming soon&#8482;
                 </p>
             </section>
         </main>
@@ -80,6 +98,25 @@
         <footer>
             Copyright &copy; 2022 David Wallace
         </footer>
+
+        <script>
+            var css = "main";
+    
+            function setStyleSheet(url){
+                var stylesheet = document.getElementById("stylesheet");
+                stylesheet.setAttribute('href', url);
+                
+                if(css==="main") {
+                    document.getElementById("dark").style.display = "none"
+                    document.getElementById("light").style.display = "contents"
+                    css = "dark"
+                } else if (css==="dark") {
+                    document.getElementById("dark").style.display = "contents"
+                    document.getElementById("light").style.display = "none"
+                    css = "main"
+                }
+            }
+        </script>
 
     </body>
 </html>

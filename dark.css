@@ -1,23 +1,31 @@
 body {
-    background-color: aliceblue;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(0, 43, 54);
+    font-family: Helvetica, Arial, sans-serif;
     max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    font-size: 1.2rem;
-    color:#333;
+    font-size: 1rem;
+    color:rgb(131,148,125);
 }
 
 h1, h2, h3, h4 {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
-    color:black
+}
+
+h1 {
+    color:antiquewhite;
 }
 
 h2 {
+    color:rgb(38,139,210);
     border-bottom: 1px solid dimgray;
     padding-bottom: 0.25em;
+}
+
+h3 {
+    color:rgb(133,153,0);
 }
 
 nav {
@@ -44,14 +52,14 @@ nav li {
 }
 
 nav a {
-    color:darkviolet;
+    color:violet;
     font-weight: 600;
     text-decoration: none;
     font-size:large;
 }
 
 nav a:hover, nav a:active {
-    color:darkslateblue;
+    color:darkviolet;
 }
 
 #about p {
