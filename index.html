@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>David Wallace Portfolio</title>
-        <link id="stylesheet" rel="stylesheet" href="./main.css" />
+        <link rel="stylesheet" href="./common.css" />
+        <link id="stylesheet" rel="stylesheet" href="./dark.css" />
         <script src="https://kit.fontawesome.com/b87fac1863.js" crossorigin="anonymous"></script>
     </head>
 
@@ -17,9 +18,9 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <a onclick="setStyleSheet('dark.css')" href="#"><li id="dark" style="display:contents"><i class="fa-solid fa-moon"></i></li></a>
-                    <a onclick="setStyleSheet('main.css')" href="#"><li id="light" style="display:none"><i class="fa-solid fa-sun"></i></li></a>
-                    <li id="alien" style="display:none"><i class="fa-solid fa-biohazard"></i></li>
+                    <a onclick="setStyleSheet('dark.css')" title="Dark mode" href="#"><li id="dark" style="display:none"><i class="fa-solid fa-moon"></i></li></a>
+                    <a onclick="setStyleSheet('light.css')" title="Light mode" href="#"><li id="light" style="display:contents"><i class="fa-solid fa-sun"></i></li></a>
+                    <a onclick="setStyleSheet('alien.css')" title="Toxic mode" href="#"><li id="alien" style="display:none"><i class="fa-solid fa-biohazard"></i></li></a>
                 </ul>
             </nav>
         </header>
@@ -29,28 +30,40 @@
                 <article>
                     <div>
                         <h2>About Me</h2>
+                        <img
+                        src="./photo.png"
+                        alt="Placeholder image in place of a personal photograph"
+                        id="photo"
+                        />
                         <p>
-                            Hiya, I'm David Wallace. Umm... idk. Hire me.
+                            Hi, I'm David Wallace, a proactive graduate of the University of Dundee with a BSc in applied computing. I currently reside in the east of Scotland. My previous professional roles include: technician, solution support officer, service desk analyst, and logistics administrator.
+                        </p>
+                        <p>
+                            My interests include video game development and level design, esports, artificial intelligence, art and design, web development, music production, guitar, rock climbing, skateboarding, fitness, philosophy, religious studies, and writing.
+                        </p>
+                        <p>
+                            I am a quick learner with attention to detail, able to quickly adapt to new systems with diligence in all work that is carried out.
                         </p>
                     </div>
-                    <img
-                    src="#"
-                    alt="Photograph of David Wallace"
-                    class="portrait"
-                    />
                 </article>
             </section>
 
             <section id="projects">
                 <h2>Projects</h2>
                 <details>
-                    <summary><h3>Portfolio project</h3></summary>
-                    <div class="project-content">Lorem ipsum.</div>
+                    <summary><h3>Portfolio projects - to be updated</h3></summary>
+                    <div class="project-content">
+                        Lorem ipsum.
+                    </div>
                 </details>
                 <details>
                     <summary><h3>BanjoDave.com</h3></summary>
-                    <div class="project-content">Lorem ipsum.</div>
+                    <div class="project-content">
+                        <p>BanjoDave is a personal project for game development, level design, art, community projects, and more. It is where I collate all the creative works that I make in my free time. Please note that I like to keep BanjoDave entirely seperate from any professional work I am involved in.</p>
+                        <div class="center"><img src="./banjodave-website.png" alt="Screenshot of BanjoDave.com"></div>
+                    </div>
                 </details>
+                <p class="center">Many more lost to time.</p>
             </section>
 
             <section id="skills">
@@ -100,20 +113,27 @@
         </footer>
 
         <script>
-            var css = "main";
+            var css = "dark";
+            var changeCounter = 0;
     
             function setStyleSheet(url){
                 var stylesheet = document.getElementById("stylesheet");
                 stylesheet.setAttribute('href', url);
                 
-                if(css==="main") {
+                if(css==="light") {
                     document.getElementById("dark").style.display = "none"
                     document.getElementById("light").style.display = "contents"
                     css = "dark"
+                    changeCounter++;
                 } else if (css==="dark") {
                     document.getElementById("dark").style.display = "contents"
                     document.getElementById("light").style.display = "none"
-                    css = "main"
+                    css = "light"
+                    changeCounter++;
+                }
+
+                if(changeCounter >= 5) {
+                    document.getElementById("alien").style.display = "contents"
                 }
             }
         </script>

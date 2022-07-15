@@ -1,10 +1,10 @@
 body {
-    background-color: rgb(0, 43, 54);
-    color:rgb(131,148,125);
+    background-color: #fdf6e3;
+    color:#657b83;
 }
 
 h1 {
-    color:antiquewhite;
+    color: #666;
 }
 
 h2 {
@@ -17,9 +17,9 @@ h3 {
 }
 
 nav a {
-    color:violet;
+    color:darkviolet;
 }
 
 nav a:hover, nav a:active {
-    color:darkviolet;
+    color:#333;
 }

@@ -1,0 +1,164 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    padding-bottom: 0.25em;
+    clear: both;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav h1 {
+    font-size:xx-large;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+}
+
+nav li {
+    margin: 1em;
+}
+
+nav i {
+    margin-left: 1em;
+}
+
+nav a {
+    font-weight: 600;
+    text-decoration: none;
+    font-size:large;
+}
+
+#about p {
+    text-indent: 2em;
+}
+
+details p {
+    text-indent: 2em;
+}
+
+#photo {
+    max-width: 200px;
+    height: auto;
+    border-radius: 1em;
+    float: right;
+    margin-left: 2em;
+    box-shadow:0 5px;
+    text-align: center;
+}
+
+details {
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    border: 1px solid dimgray;
+    border-radius: 0.5em;
+    width:100%;
+}
+
+details > div {
+    border-top: 1px solid dimgray;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+}
+
+.center {
+    text-align: center;
+}
+
+details img {
+    text-align: center;
+    border-radius: 1em;
+    box-shadow:0 5px;
+}
+
+summary {
+    width: 100%;
+    cursor: pointer;
+}
+
+summary h3 {
+    display: inline;
+}
+
+#skills ul {
+    list-style-type:square;
+}
+
+#tech {
+    columns:2;
+    font-size:smaller;
+}
+
+#contact {
+    text-align: center;
+}
+
+footer {
+    font-size: smaller;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        margin: 1em;
+    }
+    h1, h2, h3 {
+        text-align: center;
+    }
+    nav {
+        display: block;
+        font-size: small;
+    }
+    nav ul {
+        display: block;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+    nav li {
+        display: inline-block;
+        text-align: center;
+        margin:1em;
+    }
+    #photo {
+        display: block;
+        margin:auto;
+        float: none;
+    }
+    details {
+        width: 90%;
+        margin:auto;
+        margin-bottom:1em;
+    }
+    details p {
+        text-align: justify;
+    }
+    details img {
+        max-width: 300px;
+    }
+    #tech {
+        columns: unset;
+        font-size:medium;
+    }
+  }

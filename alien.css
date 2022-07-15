@@ -1,0 +1,26 @@
+body {
+    background: rgb(8,156,87);
+    background: linear-gradient(180deg, rgba(8,156,87,1) 0%, rgba(120,208,116,1) 100%);
+    color:rgb(255, 226, 182);
+}
+
+h1 {
+    color:rgb(255, 131, 183);
+}
+
+h2 {
+    color:rgb(77, 21, 114);
+    border-bottom: 1px solid rgb(204, 179, 179);
+}
+
+h3 {
+    color:rgb(212, 245, 0);
+}
+
+nav a {
+    color:rgb(148, 22, 148);
+}
+
+nav a:hover, nav a:active {
+    color:rgb(34, 170, 170);
+}
